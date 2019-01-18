@@ -1,0 +1,20 @@
+language: java
+jdk:
+  - openjdk8
+
+branches:
+  only:
+  - master
+
+cache:
+  - directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+
+
+script: "./gradlew clean build"
+
+notifications:
+  slack:
+    rooms:
+    - godngu:HmHsInvDy7lJclT9mkU9I7sx#study
