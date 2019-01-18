@@ -1,4 +1,4 @@
-package com.godngu.springbootwebservice;
+package com.godngu.webservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
