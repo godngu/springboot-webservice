@@ -19,6 +19,10 @@ notifications:
     rooms:
     - godngu:HmHsInvDy7lJclT9mkU9I7sx#study
 
+before_deploy:
+  - zip -r springboot-webservice *
+  - mkdir -p deploy
+  - mv springboot-webservice.zip deploy/springboot-webservice.zip
 
 deploy:
   - provider: s3
@@ -32,3 +36,4 @@ deploy:
     on:
       repo: godngu/springboot-webservice
       branch: master
+    local_dir: deploy
