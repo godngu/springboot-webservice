@@ -33,10 +33,10 @@ deploy:
     skip_cleanup: true
     acl: public_read
     wait-until-deployed: true
+    local_dir: deploy
     on:
       repo: godngu/springboot-webservice
       branch: master
-    local_dir: deploy
 
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
